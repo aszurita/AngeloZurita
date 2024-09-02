@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './ParticleBackground.css'; // Asegúrate de tener este archivo CSS
+import NavbarHome from './components/navbar';
 
 const ParticlesComponent = () => {
   // Crear una referencia mutable para stats
@@ -22,8 +23,8 @@ const ParticlesComponent = () => {
 
     // Cargar particles.js y luego stats.js
     Promise.all([
-      loadScript('/src/Pages/Incio/Background/js/particles.js'),
-      loadScript('/src/Pages/Incio/Background/js/stats.js')
+      loadScript('/src/Pages/Incio/HomeDiv/js/particles.js'),
+      loadScript('/src/Pages/Incio/HomeDiv/js/stats.js')
     ]).then(() => {
       if (window.particlesJS && window.Stats) {
         // Inicializar particles.js
@@ -156,6 +157,7 @@ const ParticlesComponent = () => {
   return (
     <div id="particles-js">
       <div className="js-count-particles">
+        <NavbarHome/>
       </div>
     </div>
   )
