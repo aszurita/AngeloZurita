@@ -3,22 +3,18 @@ import { Navbar } from "flowbite-react";
 
 function NavbarHome() {
   return (
-    <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Flowbite React Logo" />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite React</span>
+    <Navbar fluid rounded className="xl:mx-20 mx-5 mt-4 bg-transparent">
+      <Navbar.Brand href="">
+        <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-[#69B3A2]">HOME</span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse>
-        <Navbar.Link href="#" active>
-          Home
+      <Navbar.Collapse className="font-montserrat">
+        <Navbar.Link href="#" >
+          ABOUT ME
         </Navbar.Link>
         <Navbar.Link href="#">
-          About
+          PORTFOLIO
         </Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Pricing</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
