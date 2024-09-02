@@ -9,13 +9,13 @@ function NavbarHome() {
       rounded
       className="fixed top-0 left-0 w-full z-50 bg-white"
     >
-      <Navbar.Brand href="" className="ml-10">
+      <Navbar.Brand href="" className="ml-10 ">
         <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-[#69B3A2]">
-          HOME
+          AngeloZurita
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse className="font-montserrat mr-10">
+      <Navbar.Collapse className="font-montserrat text-xl mr-10 lg:mr-40">
         <Navbar.Link href="#">
           ABOUT ME
         </Navbar.Link>
