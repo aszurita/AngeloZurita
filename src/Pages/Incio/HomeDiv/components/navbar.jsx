@@ -1,15 +1,22 @@
 "use client";
+
 import { Navbar } from "flowbite-react";
 
 function NavbarHome() {
   return (
-    <Navbar fluid rounded className="xl:mx-20 mx-5 mt-4 bg-transparent">
-      <Navbar.Brand href="">
-        <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-[#69B3A2]">HOME</span>
+    <Navbar
+      fluid
+      rounded
+      className="fixed top-0 left-0 w-full z-50 bg-white"
+    >
+      <Navbar.Brand href="" className="ml-10">
+        <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-[#69B3A2]">
+          HOME
+        </span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse className="font-montserrat">
-        <Navbar.Link href="#" >
+      <Navbar.Collapse className="font-montserrat mr-10">
+        <Navbar.Link href="#">
           ABOUT ME
         </Navbar.Link>
         <Navbar.Link href="#">
@@ -21,6 +28,3 @@ function NavbarHome() {
 }
 
 export default NavbarHome;
-
-
-

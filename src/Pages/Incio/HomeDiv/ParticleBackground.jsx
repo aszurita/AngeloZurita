@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState} from 'react';
 import './ParticleBackground.css'; // Asegúrate de tener este archivo CSS
-import NavbarHome from './components/navbar';
-
+import AboutMe from './components/aboutme';
 const ParticlesComponent = () => {
   // Crear una referencia mutable para stats
   const statsRef = useRef(null);
@@ -31,7 +30,7 @@ const ParticlesComponent = () => {
         window.particlesJS('particles-js', {
           particles: {
             number: {
-              value: 100,
+              value: 150,
               density: {
                 enable: true,
                 value_area: 800
@@ -153,11 +152,12 @@ const ParticlesComponent = () => {
       }
     };
   }, []);
+  
 
   return (
-    <div id="particles-js">
-      <div className="js-count-particles">
-        <NavbarHome/>
+    <div id="particles-js" className='relative'>
+      <div className="js-count-particles w-full h-full" id='js-count-particles'>
+        <AboutMe></AboutMe>
       </div>
     </div>
   )

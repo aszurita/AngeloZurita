@@ -20,7 +20,7 @@ var pJS = function(tag_id, params){
     },
     particles: {
       number: {
-        value: 400,
+        value: 1500,
         density: {
           enable: true,
           value_area: 800
@@ -102,7 +102,7 @@ var pJS = function(tag_id, params){
       },
       modes: {
         grab:{
-          distance: 100,
+          distance: 50,
           line_linked:{
             opacity: 1
           }
@@ -188,43 +188,66 @@ var pJS = function(tag_id, params){
     pJS.canvas.ctx = pJS.canvas.el.getContext('2d');
   };
 
-  pJS.fn.canvasSize = function(){
+  pJS.fn.canvasSize = function() {
+    // Inicializar el tamaño del canvas
+    pJS.canvas.w = pJS.canvas.el.offsetWidth;
+    pJS.canvas.h = pJS.canvas.el.offsetHeight;
+
+    // Aplicar el tamaño mínimo de 400 píxeles de alto
+    var minHeight = 400;
+    pJS.canvas.h = Math.max(pJS.canvas.h, minHeight);
+
+    // Aplicar el tamaño al canvas
+    if (pJS.tmp.retina) {
+        pJS.canvas.w *= pJS.canvas.pxratio;
+        pJS.canvas.h *= pJS.canvas.pxratio;
+    }
 
     pJS.canvas.el.width = pJS.canvas.w;
     pJS.canvas.el.height = pJS.canvas.h;
 
-    if(pJS && pJS.interactivity.events.resize){
-
-      window.addEventListener('resize', function(){
-
-          pJS.canvas.w = pJS.canvas.el.offsetWidth;
-          pJS.canvas.h = pJS.canvas.el.offsetHeight;
-
-          /* resize canvas */
-          if(pJS.tmp.retina){
-            pJS.canvas.w *= pJS.canvas.pxratio;
-            pJS.canvas.h *= pJS.canvas.pxratio;
-          }
-
-          pJS.canvas.el.width = pJS.canvas.w;
-          pJS.canvas.el.height = pJS.canvas.h;
-
-          /* repaint canvas on anim disabled */
-          if(!pJS.particles.move.enable){
-            pJS.fn.particlesEmpty();
-            pJS.fn.particlesCreate();
-            pJS.fn.particlesDraw();
-            pJS.fn.vendors.densityAutoParticles();
-          }
-
-        /* density particles enabled */
+    // Repaint canvas on anim disabled
+    if (!pJS.particles.move.enable) {
+        pJS.fn.particlesEmpty();
+        pJS.fn.particlesCreate();
+        pJS.fn.particlesDraw();
         pJS.fn.vendors.densityAutoParticles();
-
-      });
-
     }
 
-  };
+    // Density particles enabled
+    pJS.fn.vendors.densityAutoParticles();
+
+    // Redimensionar el canvas cuando la ventana cambia de tamaño
+    if (pJS && pJS.interactivity.events.resize) {
+        window.addEventListener('resize', function() {
+            pJS.canvas.w = pJS.canvas.el.offsetWidth;
+            pJS.canvas.h = pJS.canvas.el.offsetHeight;
+
+            // Aplicar el tamaño mínimo de 400 píxeles de alto
+            pJS.canvas.h = Math.max(pJS.canvas.h, minHeight);
+
+            if (pJS.tmp.retina) {
+                pJS.canvas.w *= pJS.canvas.pxratio;
+                pJS.canvas.h *= pJS.canvas.pxratio;
+            }
+
+            pJS.canvas.el.width = pJS.canvas.w;
+            pJS.canvas.el.height = pJS.canvas.h;
+
+            // Repaint canvas on anim disabled
+            if (!pJS.particles.move.enable) {
+                pJS.fn.particlesEmpty();
+                pJS.fn.particlesCreate();
+                pJS.fn.particlesDraw();
+                pJS.fn.vendors.densityAutoParticles();
+            }
+
+            // Density particles enabled
+            pJS.fn.vendors.densityAutoParticles();
+        });
+    }
+};
+
 
 
   pJS.fn.canvasPaint = function(){
