@@ -11,6 +11,9 @@ function Home() {
             <Particles />
             <AreaToolsSkills/>
             <Projects/>
+            <div className="bg-white h-40">
+
+            </div>
         </div>
     );
 }

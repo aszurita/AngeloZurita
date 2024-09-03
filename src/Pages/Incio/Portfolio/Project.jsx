@@ -1,18 +1,43 @@
+import { useState } from 'react';
 import { info } from "../../../data/HomeInfo.js";
 import Tool from "../Skills/tool.jsx";
 
 function Project({ project }) {
   const tools = info.tools;
+  const [hover, setHover] = useState(false); // Estado para controlar el hover
 
   return (
-    <div className="min-w-[300px] w-1/3 flex flex-col">
-      <div className="h-[300px] w-full overflow-hidden">
-        <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
+    <div className="min-w-[300px] w-5/12 flex flex-col border-8 border-gray-2 rounded-xl bg-gray">
+      <div className="h-[350px] w-full overflow-hidden relative"
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}>
+        <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-t-md" />
+        {hover && (
+          <div className="absolute inset-0 flex  place-content-center place-items-end bg-black bg-opacity-30">
+          </div>
+        )}
       </div>
-      <div className="py-2 w-full">
-        <p className="font-roboto-slab text-lg text-center">{project.name}</p>
+      <div className="py-5 w-full gap-5 px-4">
+        <p className="font-roboto-slab text-3xl font-bold text-center">{project.name}</p>
+        <div className='flex place-content-center place-items-center gap-10 pt-5'>
+          {
+            project.github && (
+              <a href={project.github} target="_blank">
+                  <img src="/assets/tools/github.png" alt="GITHUB" className='w-6 h-6' />
+              </a>
+            )
+          }
+          {
+            project.link && (
+              <a href={project.link} target="_blank">
+                  <img src="/assets/tools/link.png" alt="link" className='w-6 h-6' />
+              </a>
+            )
+          }
+        </div>
+        <p className="py-5 font-roboto-slab text-lg text-center">{project.description}</p>
       </div>
-      <div className="flex place-content-center place-items-center gap-y-1 gap-x-2 flex-wrap w-full">
+      <div className="flex place-content-center place-items-center gap-y-1 gap-x-2 flex-wrap w-full p-4">
         {project.tools && project.tools.map((toolName, index) => {
           const tool = tools.find(t => t.name_tool === toolName);
           if (tool) {
@@ -23,7 +48,6 @@ function Project({ project }) {
       </div>
     </div>
   );
-  
 }
 
 export default Project;

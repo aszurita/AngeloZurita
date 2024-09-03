@@ -13,6 +13,7 @@ export default {
         'montserrat':['Montserrat','"Roboto Slab"', 'serif']
       },colors: {
         'gray': '#F8F9FA',
+        'gray-2': '#DCDDDE',
         'green-calid':'#69B3A2',
       }
     }
