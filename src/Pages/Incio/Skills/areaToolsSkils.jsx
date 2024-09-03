@@ -5,7 +5,7 @@ function AreaToolsSkills() {
   return (
     <div className="flex flex-col place-content-center place-items-center text-center rounded-md w-full">
       <div className="flex flex-col w-[90%]">
-        <h1 className="text-5xl font-roboto-slab font-bold py-10">Tools and Languages</h1>
+        <h1 className="text-5xl font-roboto-slab font-bold py-10 max-sm:text-3xl">Tools and Languages</h1>
         <div className="rounded-lg flex place-content-center place-items-center flex-wrap gap-4">
           {info.tools &&
             info.tools.map((tool, index) => (
@@ -13,8 +13,8 @@ function AreaToolsSkills() {
             ))}
         </div>
         <div className="pb-20 pt-10" >
-          <h1 className="text-5xl font-roboto-slab font-bold py-10">Skills</h1>
-          <div className="flex place-content-center place-items-center gap-5">
+          <h1 className="text-5xl font-roboto-slab font-bold py-10 max-sm:text-3xl">Skills</h1>
+          <div className="flex place-content-center place-items-center gap-5 flex-wrap">
             {info.tools && info.areas.map((area, index) => (
               <SkillsSection area={area} />
             ))}
