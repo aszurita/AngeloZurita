@@ -9,14 +9,14 @@ function AreaToolsSkills() {
         <div className="rounded-lg flex place-content-center place-items-center flex-wrap gap-4">
           {info.tools &&
             info.tools.map((tool, index) => (
-              <Tool name_tool={tool.name_tools} image={tool.image} link={tool.link} />
+              <Tool  key={index}  tool={tool}  />
             ))}
         </div>
         <div className="pb-20 pt-10" >
           <h1 className="text-5xl font-roboto-slab font-bold py-10 max-sm:text-3xl">Skills</h1>
           <div className="flex place-content-center place-items-center gap-5 flex-wrap">
-            {info.tools && info.areas.map((area, index) => (
-              <SkillsSection area={area} />
+            {info.areas && info.areas.map((area, index) => (
+              <SkillsSection  key={index}  area={area}/>
             ))}
           </div>
         </div>

@@ -1,13 +1,16 @@
 import Particles from "./HomeDiv/ParticleBackground";
 import NavbarHome from "./HomeDiv/components/navbar";
-import AreaTAreaToolsSkillsools from "./Skills/areaToolsSkils";
+import AreaToolsSkills from "./Skills/areaToolsSkils";
+import Projects from "./Portfolio/Projects";
+
 
 function Home() {
     return (
         <div className="h-full bg-white">
             <NavbarHome/>
             <Particles />
-            <AreaTAreaToolsSkillsools/>
+            <AreaToolsSkills/>
+            <Projects/>
         </div>
     );
 }
