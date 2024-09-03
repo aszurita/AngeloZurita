@@ -29,7 +29,7 @@ function AboutMe() {
         <div className="h-1 w-[90%] bg-black place-content-center place-items-center">
         </div>
       </div>
-      <div className="flex place-content-center place-items-center gap-10  max-sm:gap-5 !border-t-8 !border-gray-800">
+      <div className="flex place-content-center place-items-center gap-10  max-sm:gap-5">
         <SocialMedia sm={true}  type='github'/>
         <SocialMedia sm={true}  type='linkedin'/>
         <SocialMedia sm={true}  type='X'/>

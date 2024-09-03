@@ -2,32 +2,36 @@ import { Link } from "react-router-dom";
 
 export let info = {
   introductoryparagraph : "👋 Hi! <strong>I'm Angelo Saul Zurita Guerrero</strong>, a Computer Science student from Ecuador with a strong passion for programming and artificial intelligence. Currently, I serve as the Vice President of TAWS and a Teaching Assistant at ESPOL, where I lead research projects and support students in their learning journey. I am particularly interested in data science and computer vision, and I actively seek opportunities to apply my skills in real-world projects. I'm excited to connect and collaborate with others in the tech community! 🚀",
-  areas:{
-    DataScience: {
+  areas:[
+    {
       name: "Data Science / AI",
+      imagen:"public/assets/skills/DataScience.png",
       phrase: "Artificial intelligence is the new electricity.",
       author: "Andrew Ng",
       placework: "Stanford University",
     },
-    Frontend: {
+    {
       name: "Frontend Developer",
+      imagen:"public/assets/skills/Fronted.png",
       phrase: "The web is a canvas for creativity.",
       author: "Evan You",
       placework: "Creator of Vue.js"
     },
-    Backend: {
+    {
       name: "Backend Developer",
+      imagen:"public/assets/skills/Backend.png",
       phrase: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
       author: "Martin Fowler",
       placework: "ThoughtWorks"
     },
-    Designer: {
+    {
       name: "Designer UX",
+      imagen:"public/assets/skills/Desing.png",
       phrase: "Design is not just what it looks like and feels like. Design is how it works.",
       author: "Don Norman",
       placework: "Nielsen Norman Group"
     }
-  },
+  ],
   tools: [
     {
       name_tools: "Python",
@@ -50,9 +54,24 @@ export let info = {
       link: "https://www.w3.org/Style/CSS/"
     },
     {
+      name_tools: "Git",
+      image: "public/assets/tools/Git.png",
+      link: "https://git-scm.com/"
+    },
+    {
+      name_tools: "NPM",
+      image: "public/assets/tools/NPM.png",
+      link: "https://www.npmjs.com/"
+    },
+    {
       name_tools: "Tailwind CSS",
       image: "public/assets/tools/TailwindCSS.png",
       link: "https://tailwindcss.com/"
+    },    
+    {
+      name_tools: "C#",
+      image: "public/assets/tools/c-.png",
+      link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
     },
     {
       name_tools: "Azure SQL Database",
@@ -63,11 +82,6 @@ export let info = {
       name_tools: "scikit-learn",
       image: "public/assets/tools/scikit-learn.png",
       link: "https://scikit-learn.org/"
-    },
-    {
-      name_tools: "NPM",
-      image: "public/assets/tools/NPM.png",
-      link: "https://www.npmjs.com/"
     },
     {
       name_tools: "Plotly",
@@ -88,11 +102,6 @@ export let info = {
       name_tools: "Pandas",
       image: "public/assets/tools/Pandas.png",
       link: "https://pandas.pydata.org/"
-    },
-    {
-      name_tools: "C#",
-      image: "public/assets/tools/c-.png",
-      link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
     },
     {
       name_tools: "HTML5",
@@ -129,10 +138,5 @@ export let info = {
       image: "public/assets/tools/React.png",
       link: "https://reactjs.org/"
     },
-    {
-      name_tools: "Git",
-      image: "public/assets/tools/Git.png",
-      link: "https://git-scm.com/"
-    }
   ]
 };
