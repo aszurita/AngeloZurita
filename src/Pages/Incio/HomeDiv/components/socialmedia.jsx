@@ -24,7 +24,7 @@ function SocialMedia({ sm, type }) {
 
   return (
     <div className={string_className}>
-      <a href={link} target="_blank" rel="noopener noreferrer">
+      <a href={link} target="_blank">
         {icon}
       </a>
     </div>

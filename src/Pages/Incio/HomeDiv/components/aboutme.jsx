@@ -39,7 +39,7 @@ function AboutMe() {
       </div>
     </div>
     <div className={`absolute top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 mt-24 h-40 w-[60%] max-sm:w-[80%] bg-transparent z-10`}>
-      <div className="text-[1.5vw] max-sm:text-[2vw] justify-center text-center pt-10 w-full" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
+      <div className="text-[1.5vw] max-sm:text-[2vw] justify-center text-center pt-10 w-full font-roboto-slab" dangerouslySetInnerHTML={{ __html: info.introductoryparagraph }} />
     </div>
     </div>
   )
