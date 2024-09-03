@@ -39,6 +39,16 @@ export let info = {
       link: "https://www.python.org/"
     },
     {
+      name_tools: "Java",
+      image: "public/assets/tools/java.png",
+      link: "https://www.java.com/"
+    },
+    {
+      name_tools: "C#",
+      image: "public/assets/tools/c-.png",
+      link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
+    },
+    {
       name_tools: "Vite.js",
       image: "public/assets/tools/Vite.js.png",
       link: "https://vitejs.dev/"
@@ -49,49 +59,43 @@ export let info = {
       link: "https://nodejs.org/"
     },
     {
+      name_tools: "JavaScript",
+      image: "public/assets/tools/js.png",
+      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+    },
+    {
+      name_tools: "HTML5",
+      image: "public/assets/tools/html-5.png",
+      link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+    },
+    {
       name_tools: "CSS3",
       image: "public/assets/tools/CSS3.png",
       link: "https://www.w3.org/Style/CSS/"
-    },
-    {
-      name_tools: "Git",
-      image: "public/assets/tools/Git.png",
-      link: "https://git-scm.com/"
-    },
+    },    {
+      name_tools: "Tailwind CSS",
+      image: "public/assets/tools/TailwindCSS.png",
+      link: "https://tailwindcss.com/"
+    }, 
     {
       name_tools: "NPM",
       image: "public/assets/tools/NPM.png",
       link: "https://www.npmjs.com/"
     },
     {
-      name_tools: "Tailwind CSS",
-      image: "public/assets/tools/TailwindCSS.png",
-      link: "https://tailwindcss.com/"
-    },    
-    {
-      name_tools: "C#",
-      image: "public/assets/tools/c-.png",
-      link: "https://learn.microsoft.com/en-us/dotnet/csharp/"
-    },
+      name_tools: "Git",
+      image: "public/assets/tools/Git.png",
+      link: "https://git-scm.com/"
+    },   
     {
       name_tools: "Azure SQL Database",
       image: "public/assets/tools/AzureSQLDatabase.png",
       link: "https://azure.microsoft.com/en-us/services/sql-database/"
     },
     {
-      name_tools: "scikit-learn",
-      image: "public/assets/tools/scikit-learn.png",
-      link: "https://scikit-learn.org/"
-    },
-    {
       name_tools: "Plotly",
       image: "public/assets/tools/Ploty.png",
       link: "https://plotly.com/"
-    },
-    {
-      name_tools: "Matplotlib",
-      image: "public/assets/tools/Matplotlib.png",
-      link: "https://matplotlib.org/"
     },
     {
       name_tools: "NumPy",
@@ -104,14 +108,19 @@ export let info = {
       link: "https://pandas.pydata.org/"
     },
     {
-      name_tools: "HTML5",
-      image: "public/assets/tools/html-5.png",
-      link: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      name_tools: "Matplotlib",
+      image: "public/assets/tools/Matplotlib.png",
+      link: "https://matplotlib.org/"
     },
     {
-      name_tools: "JavaScript",
-      image: "public/assets/tools/js.png",
-      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+      name_tools: "scikit-learn",
+      image: "public/assets/tools/scikit-learn.png",
+      link: "https://scikit-learn.org/"
+    },
+    {
+      name_tools: "CatBoost",
+      image: "public/assets/tools/CatBoostLogo.png",
+      link: "https://catboost.ai/"
     },
     {
       name_tools: "SQL Server",
@@ -124,19 +133,19 @@ export let info = {
       link: "https://github.com/"
     },
     {
+      name_tools: "React",
+      image: "public/assets/tools/React.png",
+      link: "https://reactjs.org/"
+    },
+    {
       name_tools: "Figma",
       image: "public/assets/tools/figma.png",
       link: "https://www.figma.com/"
     },
     {
-      name_tools: "Java",
-      image: "public/assets/tools/java.png",
-      link: "https://www.java.com/"
-    },
-    {
-      name_tools: "React",
-      image: "public/assets/tools/React.png",
-      link: "https://reactjs.org/"
-    },
+      name_tools: "ChatGpt Api",
+      image:"public/assets/tools/",
+      link: "https://openai.com/index/introducing-chatgpt-and-whisper-apis/"
+    }
   ]
 };
