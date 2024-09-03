@@ -5,7 +5,7 @@ function Project({ project }) {
   const tools = info.tools;
 
   return (
-    <div className="min-w-[300px] w-1/3 flex flex-col items-center">
+    <div className="min-w-[300px] w-1/3 flex flex-col">
       <div className="h-[300px] w-full overflow-hidden">
         <img src={project.image} alt={project.name} className="w-full h-full object-cover" />
       </div>

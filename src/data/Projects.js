@@ -26,7 +26,7 @@ export let projects=[
     link:"",
     github:"https://github.com/aszurita/BreastCancer",
     tools:[
-      "Python","Git","GitHub","ChatGpt Api","scikit-learn","CatBoost",
+      "Python","Git","GitHub","ChatGpt Api"
     ]
   },
   {
