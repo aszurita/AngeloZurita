@@ -5,31 +5,8 @@ function Home() {
         <div className="h-full bg-white">
             <NavbarHome/>
             <Particles />
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
+            <div className="flex justify-center items-center h-40 bg-gray text-cyan-50">
             </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-            <div className="flex justify-center items-center h-40 bg-slate-400 text-cyan-50">
-            </div>
-
         </div>
     );
 }

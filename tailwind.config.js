@@ -11,6 +11,8 @@ export default {
       fontFamily:{
         'roboto-slab': ['"Roboto Slab"', 'serif'],
         'montserrat':['Montserrat','"Roboto Slab"', 'serif']
+      },colors: {
+        'gray': '#F8F9FA',
       }
     }
   },

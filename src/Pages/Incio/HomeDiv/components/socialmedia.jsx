@@ -4,7 +4,7 @@ import { FaTwitter as FaXTwitter } from 'react-icons/fa6'; // Usa la importació
 
 function SocialMedia({ sm, type }) {
   const size_icon = sm ? 20 : 30;
-  const string_className = `rounded-full flex place-content-center place-items-center h-12 w-12 max-sm:h-10 max-sm:w-10 bg-black z-20 ${sm ? 'max-sm:hidden' : 'sm:hidden'}`;
+  const string_className = `rounded-full flex place-content-center place-items-center h-12 w-12 max-sm:h-10 max-sm:w-10 bg-black z-20 ${sm ? 'max-sm:hidden' : 'sm:hidden'} hover:bg-[#69B3A2] `;
 
   // Determina el enlace y el ícono basado en el tipo recibido
   const getIconAndLink = () => {
