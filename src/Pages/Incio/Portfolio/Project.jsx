@@ -4,18 +4,21 @@ import Tool from "../Skills/tool.jsx";
 
 function Project({ project }) {
   const tools = info.tools;
-  const [hover, setHover] = useState(false); // Estado para controlar el hover
-
+  const link_image = project.link || project.github; 
   return (
-    <div className="min-w-[300px] w-5/12 flex flex-col border-8 border-gray-2 rounded-xl bg-gray">
-      <div className="h-[350px] w-full overflow-hidden relative"
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}>
-        <img src={project.image} alt={project.name} className="w-full h-full object-cover rounded-t-md" />
-        {hover && (
-          <div className="absolute inset-0 flex  place-content-center place-items-end bg-black bg-opacity-30">
-          </div>
-        )}
+    <div className="min-w-[300px] w-5/12 flex flex-col border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid">
+      <div
+        className="h-[350px] w-full overflow-hidden relative"
+      >
+        <a href={link_image} target='_blank'>
+          <img
+            src={project.image}
+            alt={project.name}
+            className="w-full h-full object-cover rounded-t-md transform transition duration-300 ease-out hover:scale-110"
+            style={{ maskImage: 'linear-gradient(to bottom, black 60%, transparent)' }}
+          />
+        </a>
+
       </div>
       <div className="py-5 w-full gap-5 px-4">
         <p className="font-roboto-slab text-3xl font-bold text-center">{project.name}</p>
@@ -23,14 +26,14 @@ function Project({ project }) {
           {
             project.github && (
               <a href={project.github} target="_blank">
-                  <img src="/assets/tools/github.png" alt="GITHUB" className='w-6 h-6' />
+                <img src="/assets/tools/github.png" alt="GITHUB" className='w-6 h-6' />
               </a>
             )
           }
           {
             project.link && (
               <a href={project.link} target="_blank">
-                  <img src="/assets/tools/link.png" alt="link" className='w-6 h-6' />
+                <img src="/assets/tools/link.png" alt="link" className='w-6 h-6' />
               </a>
             )
           }
