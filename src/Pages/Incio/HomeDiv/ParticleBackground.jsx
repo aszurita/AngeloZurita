@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState} from 'react';
 import './ParticleBackground.css'; // Asegúrate de tener este archivo CSS
-import AboutMe from './components/aboutme';
+import AboutMe from './components/Aboutme';
 const ParticlesComponent = () => {
   // Crear una referencia mutable para stats
   const statsRef = useRef(null);

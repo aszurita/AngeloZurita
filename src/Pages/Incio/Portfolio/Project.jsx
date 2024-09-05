@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { info } from "../../../data/HomeInfo.js";
-import Tool from "../Skills/tool.jsx";
+import Tool from "../Skills/Tool.jsx";
 
 function Project({ project }) {
   const tools = info.tools;
-  const link_image = project.link || project.github; 
+  const link_image = project.link || project.github;
   return (
     <div className="min-w-[300px] w-5/12 flex flex-col border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid">
       <div

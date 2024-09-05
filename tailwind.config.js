@@ -10,7 +10,8 @@ export default {
     extend:{
       fontFamily:{
         'roboto-slab': ['"Roboto Slab"', 'serif'],
-        'montserrat':['Montserrat','"Roboto Slab"', 'serif']
+        'montserrat':['Montserrat','"Roboto Slab"', 'serif'],
+        'comillas': ['"Playfair Display"', 'serif'],
       },colors: {
         'gray': '#F8F9FA',
         'gray-2': '#DCDDDE',
