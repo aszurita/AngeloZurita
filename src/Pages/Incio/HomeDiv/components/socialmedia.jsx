@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
-import { FaTwitter as FaXTwitter } from 'react-icons/fa6'; // Usa la importación correcta
+import { BsTwitterX } from "react-icons/bs";
 
 function SocialMedia({ sm, type }) {
   const size_icon = sm ? 20 : 30;
@@ -14,7 +14,7 @@ function SocialMedia({ sm, type }) {
       case 'linkedin':
         return { icon: <FaLinkedinIn size={size_icon} color="white" />, link: "https://www.linkedin.com/in/angelo-saul-zurita-guerrero/" };
       case 'X':
-        return { icon: <FaXTwitter size={size_icon} color="white" />, link: "https://twitter.com/aszurita" };
+        return { icon: <BsTwitterX size={size_icon} color="white" />, link: "https://twitter.com/aszurita" };
       default:
         return { icon: null, link: "#" };
     }

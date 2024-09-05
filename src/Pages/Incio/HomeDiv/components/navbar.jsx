@@ -16,7 +16,7 @@ function NavbarHome() {
       <Navbar.Toggle />
       <Navbar.Collapse className="font-montserrat text-xl mr-10 lg:mr-40 select-none">
         <Navbar.Link
-          href="#"
+          href="#AboutMe"
           className={`hover:!text-green-calid ${
             activeLink === "ABOUT ME" ? "text-green-calid !border-b-2 !border-green-calid" : ""
           }`}

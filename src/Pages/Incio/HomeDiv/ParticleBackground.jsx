@@ -157,7 +157,7 @@ const ParticlesComponent = () => {
   return (
     <div id="particles-js" className='relative'>
       <div className="js-count-particles w-full h-full" id='js-count-particles'>
-        <AboutMe></AboutMe>
+        <AboutMe/>
       </div>
     </div>
   )
