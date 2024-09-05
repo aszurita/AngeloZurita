@@ -9,7 +9,7 @@ function MeExperienceSection() {
         <div className="w-1/3 min-w-[325px]">
           <Profile />
         </div>
-        <div className="w-2/3">
+        <div className="w-2/3 max-lg:pt-5">
           <div className="w-full">
             <p className="text-2xl font-roboto-slab font-bold select-none">Experiences</p>
           </div>
@@ -27,7 +27,7 @@ function MeExperienceSection() {
                   <svg width="40" height="40">
                     <circle cx="20" cy="20" r="6" stroke="#f8f9fa" stroke-width="2" fill="#69b3a2" />
                   </svg>
-                  <span key={index}>{education.title}</span>,&nbsp;<span key={index}>{education.place}</span>
+                  <span key={index}>{education.title}</span>
                 </div>
                 )
               })

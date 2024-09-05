@@ -4,11 +4,11 @@ import { useState } from "react";
 import { Navbar } from "flowbite-react";
 
 function NavbarHome() {
-  const [activeLink, setActiveLink] = useState("ABOUT ME");
+  const [activeLink, setActiveLink] = useState("HOME");
 
   return (
     <Navbar fluid rounded className="fixed top-0 left-0 w-full z-50 bg-white">
-      <Navbar.Brand href="" className="ml-10">
+      <Navbar.Brand href="" className="ml-10" onClick={() => setActiveLink("HOME")} >
         <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-green-calid">
           AngeloZurita
         </span>
@@ -32,6 +32,15 @@ function NavbarHome() {
           onClick={() => setActiveLink("PORTFOLIO")} 
         >
           PORTFOLIO
+        </Navbar.Link>
+        <Navbar.Link
+          href="#Tools"
+          className={`hover:!text-green-calid ${
+            activeLink === "TOOLS" ? "text-green-calid !border-b-2 !border-green-calid" : ""
+          }`}
+          onClick={() => setActiveLink("TOOLS")} 
+        >
+          ABOUT ME
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

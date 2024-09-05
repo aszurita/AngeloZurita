@@ -19,7 +19,7 @@ export let profile ={
       date: "18/03/2024 - CURRENT",
       title: "Leader of the Official WiDS ESPOL 2024 Website",
       place: "WIDS, Guayaquil, Ecuador",
-      description: ["Oversee the development and maintenance of the WiDS ESPOL 2024 website, ensuring it aligns with the event's objectives.","Lead a team to implement key functionalities, optimizing user experience and site performance."]
+      description: ["Oversee the development and maintenance of the WiDS ESPOL 2024 website.","Lead a team to implement key functionalities, optimizing user experience and site performance."]
     }
   ],
   education : [

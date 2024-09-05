@@ -3,7 +3,7 @@ import Tool from "./Tool.jsx";
 import SkillsSection from "./Skills.jsx";
 function AreaToolsSkills() {
   return (
-    <div className="flex flex-col place-content-center place-items-center text-center rounded-md w-full">
+    <div className="flex flex-col place-content-center place-items-center text-center rounded-md w-full" id="Tools">
       <div className="flex flex-col w-[90%]">
         <h1 className="text-5xl font-roboto-slab font-bold py-10 max-sm:text-3xl select-none">Tools and Languages</h1>
         <div className="rounded-lg flex place-content-center place-items-center flex-wrap gap-4">
