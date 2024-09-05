@@ -17,30 +17,27 @@ function NavbarHome() {
       <Navbar.Collapse className="font-montserrat text-xl mr-10 lg:mr-40 select-none">
         <Navbar.Link
           href="#AboutMe"
-          className={`hover:!text-green-calid ${
-            activeLink === "ABOUT ME" ? "text-green-calid !border-b-2 !border-green-calid" : ""
-          }`}
-          onClick={() => setActiveLink("ABOUT ME")} 
+          className={`hover:!text-green-calid ${activeLink === "ABOUT ME" ? "text-green-calid !border-b-2 !border-green-calid" : ""
+            }`}
+          onClick={() => setActiveLink("ABOUT ME")}
         >
           ABOUT ME
         </Navbar.Link>
         <Navbar.Link
           href="#Portfolio"
-          className={`hover:!text-green-calid ${
-            activeLink === "PORTFOLIO" ? "text-green-calid !border-b-2 !border-green-calid" : ""
-          }`}
-          onClick={() => setActiveLink("PORTFOLIO")} 
+          className={`hover:!text-green-calid ${activeLink === "PORTFOLIO" ? "text-green-calid !border-b-2 !border-green-calid" : ""
+            }`}
+          onClick={() => setActiveLink("PORTFOLIO")}
         >
           PORTFOLIO
         </Navbar.Link>
         <Navbar.Link
           href="#Tools"
-          className={`hover:!text-green-calid ${
-            activeLink === "TOOLS" ? "text-green-calid !border-b-2 !border-green-calid" : ""
-          }`}
-          onClick={() => setActiveLink("TOOLS")} 
+          className={`hover:!text-green-calid ${activeLink === "TOOLS" ? "text-green-calid !border-b-2 !border-green-calid" : ""
+            }`}
+          onClick={() => setActiveLink("TOOLS")}
         >
-          ABOUT ME
+          TOOLS
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
