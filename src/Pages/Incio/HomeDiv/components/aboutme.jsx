@@ -1,4 +1,4 @@
-import SocialMedia from "./Socialmedia.jsx";
+import SocialMedia from "./socialmedia.jsx";
 import { info } from "../../../../data/HomeInfo.js";
 import { ThemeContext } from "../../Shared/ThemeContext.jsx";
 import { useContext } from 'react';

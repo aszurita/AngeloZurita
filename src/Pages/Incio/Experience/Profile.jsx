@@ -1,5 +1,5 @@
 import { profile } from "../../../data/Profile"
-import SocialMedia from "../HomeDiv/components/Socialmedia.jsx";
+import SocialMedia from "../HomeDiv/components/socialmedia.jsx";
 
 function Profile() {
   return (
@@ -19,13 +19,13 @@ function Profile() {
           </div>
         </div>
         <div className="flex place-content-center place-items-center gap-10  max-sm:gap-5">
-        <SocialMedia sm={true}  type='github'/>
-        <SocialMedia sm={true}  type='linkedin'/>
-        <SocialMedia sm={true}  type='X'/>
-        <SocialMedia sm={false}  type='github'/>
-        <SocialMedia sm={false}  type='linkedin'/>
-        <SocialMedia sm={false}  type='X'/>
-      </div>
+          <SocialMedia sm={true} type='github' />
+          <SocialMedia sm={true} type='linkedin' />
+          <SocialMedia sm={true} type='X' />
+          <SocialMedia sm={false} type='github' />
+          <SocialMedia sm={false} type='linkedin' />
+          <SocialMedia sm={false} type='X' />
+        </div>
       </div>
     </div>
   )
