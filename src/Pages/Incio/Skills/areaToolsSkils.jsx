@@ -28,5 +28,4 @@ function AreaToolsSkills() {
     </div>
   )
 }
-
 export default AreaToolsSkills;
