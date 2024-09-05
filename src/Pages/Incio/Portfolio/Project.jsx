@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import { info } from "../../../data/HomeInfo.js";
-import Tool from "../Skills/Tool.jsx";
+import Tool from "../Skills/tool.jsx";
 
 function Project({ project }) {
   const tools = info.tools;
