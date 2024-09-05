@@ -1,9 +1,8 @@
 import Particles from "./HomeDiv/ParticleBackground";
 import NavbarHome from "./HomeDiv/components/navbar";
-import AreaToolsSkills from "./Skills/AreaToolsSkils";
+import AreaToolsSkills from "./Skills/areaToolsSkils";
 import Projects from "./Portfolio/Projects";
 import MeExperienceSection from "./Experience/MeExperienceSection";
-import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
 import { ThemeContext } from "../Incio/Shared/ThemeContext";
 import { useContext } from 'react';
 function Home() {
