@@ -15,7 +15,7 @@ function Home() {
             <AreaToolsSkills />
             <Projects />
             <MeExperienceSection />
-            <div className={`h-40 w-full`}>
+            <div className={`h-10 w-full`}>
             </div>
         </div>
     );
