@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useContext } from "react";
 import { Navbar } from "flowbite-react";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md";
@@ -10,7 +8,7 @@ function NavbarHome() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   return (
-    <Navbar fluid rounded className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black !text-white":"bg-white"} `}>
+    <Navbar fluid rounded className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black !text-white" : "bg-white"} `}>
       <Navbar.Brand href="" className="ml-10" onClick={() => setActiveLink("HOME")}>
         <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-green-calid">
           AngeloZurita
@@ -49,7 +47,7 @@ function NavbarHome() {
           {darkMode ? (
             <MdDarkMode size={20} />
           ) : (
-            <MdOutlineDarkMode size={20}  />
+            <MdOutlineDarkMode size={20} />
           )}
         </div>
       </Navbar.Collapse>
