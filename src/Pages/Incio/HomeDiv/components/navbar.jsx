@@ -10,7 +10,7 @@ function NavbarHome() {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   return (
-    <Navbar fluid rounded className="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gray-900">
+    <Navbar fluid rounded className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black !text-white":"bg-white"} `}>
       <Navbar.Brand href="" className="ml-10" onClick={() => setActiveLink("HOME")}>
         <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-green-calid">
           AngeloZurita
@@ -44,12 +44,12 @@ function NavbarHome() {
           onClick={toggleDarkMode}
         >
           <span className="dark:text-white">
-            {darkMode ? "DARK MODE" : "LIGHT MODE"}&nbsp;
+            {!darkMode ? "DARK MODE" : "LIGHT MODE"}&nbsp;
           </span>
           {darkMode ? (
-            <MdDarkMode size={20} className="dark:text-white" />
+            <MdDarkMode size={20} />
           ) : (
-            <MdOutlineDarkMode size={20} className="text-gray-900" />
+            <MdOutlineDarkMode size={20}  />
           )}
         </div>
       </Navbar.Collapse>

@@ -1,12 +1,12 @@
-import React, { useEffect, useRef, useState} from 'react';
-import './ParticleBackground.css'; // Asegúrate de tener este archivo CSS
+import React, { useEffect, useRef, useContext} from 'react';
+import './ParticleBackground.css'; 
 import AboutMe from './components/Aboutme';
+import { ThemeContext } from "../Shared/ThemeContext";
 const ParticlesComponent = () => {
-  // Crear una referencia mutable para stats
   const statsRef = useRef(null);
+  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
 
   useEffect(() => {
-    // Función para cargar un script y ejecutar una función de callback
     const loadScript = (src, onLoad) => {
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
@@ -19,8 +19,6 @@ const ParticlesComponent = () => {
         document.body.appendChild(script);
       });
     };
-
-    // Cargar particles.js y luego stats.js
     Promise.all([
       loadScript('/src/Pages/Incio/HomeDiv/js/particles.js'),
       loadScript('/src/Pages/Incio/HomeDiv/js/stats.js')
@@ -155,7 +153,7 @@ const ParticlesComponent = () => {
   
 
   return (
-    <div id="particles-js" className='relative'>
+    <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white':'bg-transparent'}`}>
       <div className="js-count-particles w-full h-full" id='js-count-particles'>
         <AboutMe/>
       </div>

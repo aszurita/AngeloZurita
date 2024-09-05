@@ -4,18 +4,18 @@ import AreaToolsSkills from "./Skills/AreaToolsSkils";
 import Projects from "./Portfolio/Projects";
 import MeExperienceSection from "./Experience/MeExperienceSection";
 import { MdDarkMode,MdOutlineDarkMode } from "react-icons/md";
+import { ThemeContext } from "../Incio/Shared/ThemeContext";
+import { useContext } from 'react';
 function Home() {
+    const { darkMode } = useContext(ThemeContext);
     return (
-        <div className="h-full bg-white">
+        <div className={`${darkMode ? 'bg-black text-white' : 'text-black bg-white'} h-ful`}>
             <NavbarHome />
             <Particles />
             <AreaToolsSkills />
             <Projects />
             <MeExperienceSection />
-            <div className="flex">
-                <div>
-                    {true ? <div className="flex align-middle justify-center">DARK MODE <MdDarkMode size={20}/></div> : <div>LIGHT MODE <MdOutlineDarkMode size={20}/></div>}
-                </div>
+            <div className={`h-40 w-full`}>
             </div>
         </div>
     );
