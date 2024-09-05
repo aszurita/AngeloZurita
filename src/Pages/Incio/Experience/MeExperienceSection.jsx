@@ -1,5 +1,5 @@
 import Profile from "./Profile";
-import Experience from "./experience";
+import Experience from "./Experience";
 import { profile } from "../../../data/Profile";
 import { ThemeContext } from "../Shared/ThemeContext.jsx";
 import {useContext} from 'react';
