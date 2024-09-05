@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useContext} from 'react';
 import './ParticleBackground.css'; 
-import AboutMe from './components/Aboutme';
+import AboutMe from './components/aboutme';
 import { ThemeContext } from "../Shared/ThemeContext";
 const ParticlesComponent = () => {
   const statsRef = useRef(null);

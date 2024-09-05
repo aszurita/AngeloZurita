@@ -1,5 +1,5 @@
 import { profile } from "../../../data/Profile"
-import SocialMedia from '../HomeDiv/components/Socialmedia';
+import SocialMedia from "../HomeDiv/components/Socialmedia.jsx";
 
 function Profile() {
   return (

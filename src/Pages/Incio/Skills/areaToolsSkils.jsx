@@ -1,6 +1,6 @@
 import { info } from "../../../data/HomeInfo.js";
-import Tool from "./Tool.jsx";
-import SkillsSection from "./Skills.jsx";
+import Tool from "./tool.jsx";
+import SkillsSection from "./skills.jsx";
 import { ThemeContext } from "../Shared/ThemeContext.jsx";
 import { useContext } from 'react';
 

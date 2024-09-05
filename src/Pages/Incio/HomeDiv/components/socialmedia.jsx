@@ -1,8 +1,8 @@
-import React from 'react';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { BsTwitterX } from "react-icons/bs";
 import { ThemeContext } from "../../Shared/ThemeContext";
 import { useContext } from 'react';
+
 function SocialMedia({ sm, type }) {
   const { darkMode, toggleDarkMode } = useContext(ThemeContext);
   const size_icon = sm ? 20 : 30;
