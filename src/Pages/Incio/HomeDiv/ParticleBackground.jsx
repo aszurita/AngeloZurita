@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useContext} from 'react';
-import './ParticleBackground.css'; 
+import React, { useEffect, useRef, useContext } from 'react';
+import './ParticleBackground.css';
 import AboutMe from './components/aboutme';
 import { ThemeContext } from "../Shared/ThemeContext";
 const ParticlesComponent = () => {
@@ -20,8 +20,8 @@ const ParticlesComponent = () => {
       });
     };
     Promise.all([
-      loadScript('/src/Pages/Incio/HomeDiv/js/particles.js'),
-      loadScript('/src/Pages/Incio/HomeDiv/js/stats.js')
+      loadScript('/assets/js/particles.js'),
+      loadScript('/assets/js/stats.js')
     ]).then(() => {
       if (window.particlesJS && window.Stats) {
         // Inicializar particles.js
@@ -150,12 +150,12 @@ const ParticlesComponent = () => {
       }
     };
   }, []);
-  
+
 
   return (
-    <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white':'bg-transparent'}`}>
+    <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white' : 'bg-transparent'}`}>
       <div className="js-count-particles w-full h-full" id='js-count-particles'>
-        <AboutMe/>
+        <AboutMe />
       </div>
     </div>
   )
