@@ -1,65 +1,41 @@
-import React, { useEffect, useRef, useContext } from 'react';
+import React, { useEffect, useRef, useContext, Suspense } from 'react';
 import './ParticleBackground.css';
-import AboutMe from './components/aboutme';
 import { ThemeContext } from "../Shared/ThemeContext";
+
+// Lazy-load de AboutMe para optimizar la carga inicial
+const AboutMe = React.lazy(() => import('./components/aboutme'));
+
 const ParticlesComponent = () => {
   const statsRef = useRef(null);
-  const { darkMode, toggleDarkMode } = useContext(ThemeContext);
+  const { darkMode } = useContext(ThemeContext);
 
   useEffect(() => {
-    const loadScript = (src, onLoad) => {
+    // Función para cargar scripts
+    const loadScript = (src) => {
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
-        script.onload = () => {
-          resolve();
-          if (onLoad) onLoad();
-        };
-        script.onerror = () => reject(new Error(`Script load error for ${src}`));
+        script.defer = true;  // Carga sin bloquear el HTML
+        script.onload = resolve;
+        script.onerror = () => reject(new Error(`Error cargando el script: ${src}`));
         document.body.appendChild(script);
       });
     };
-    Promise.all([
-      loadScript('/assets/js/particles.js'),
-      loadScript('/assets/js/stats.js')
-    ]).then(() => {
-      if (window.particlesJS && window.Stats) {
-        // Inicializar particles.js
+
+    // Cargar los scripts de forma paralela
+    const loadParticles = loadScript('/assets/js/particles.js');
+    const loadStats = loadScript('/assets/js/stats.js');
+
+    // Inicializar partículas después de cargar
+    loadParticles.then(() => {
+      if (window.particlesJS) {
         window.particlesJS('particles-js', {
           particles: {
-            number: {
-              value: 150,
-              density: {
-                enable: true,
-                value_area: 800
-              }
-            },
-            color: {
-              value: "#808080"
-            },
-            shape: {
-              type: "circle"
-            },
-            opacity: {
-              value: 0.5,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 1,
-                opacity_min: 0.1,
-                sync: false
-              }
-            },
-            size: {
-              value: 5,
-              random: true,
-              anim: {
-                enable: false,
-                speed: 40,
-                size_min: 0.1,
-                sync: false
-              }
-            },
+            number: { value: 150, density: { enable: true, value_area: 800 } },
+            color: { value: "#808080" },
+            shape: { type: "circle" },
+            opacity: { value: 0.5, random: true },
+            size: { value: 5, random: true },
             line_linked: {
               enable: true,
               distance: 150,
@@ -67,67 +43,33 @@ const ParticlesComponent = () => {
               opacity: 0.4,
               width: 1
             },
-            move: {
-              enable: true,
-              speed: 6,
-              direction: "none",
-              random: false,
-              straight: false,
-              out_mode: "out",
-              bounce: false,
-              attract: {
-                enable: false,
-                rotateX: 600,
-                rotateY: 1200
-              }
-            }
+            move: { enable: true, speed: 6 }
           },
           interactivity: {
             detect_on: "canvas",
             events: {
-              onhover: {
-                enable: true,
-                mode: "repulse"
-              },
-              onclick: {
-                enable: true,
-                mode: "push"
-              },
+              onhover: { enable: true, mode: "repulse" },
+              onclick: { enable: true, mode: "push" },
               resize: true
             },
             modes: {
-              grab: {
-                distance: 400,
-                line_linked: {
-                  opacity: 1
-                }
-              },
-              bubble: {
-                distance: 400,
-                size: 40,
-                duration: 2,
-                opacity: 8,
-                speed: 3
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4
-              },
-              push: {
-                particles_nb: 4
-              },
-              remove: {
-                particles_nb: 2
-              }
+              grab: { distance: 400, line_linked: { opacity: 1 } },
+              bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 }
             }
           },
           retina_detect: true
         });
+      }
+    });
 
-        // Inicializar stats.js
+    // Cargar y inicializar stats.js
+    loadStats.then(() => {
+      if (window.Stats) {
         const stats = new window.Stats();
         stats.setMode(0);
-        // Guardar la referencia de stats en statsRef
         statsRef.current = stats;
 
         const update = () => {
@@ -136,29 +78,26 @@ const ParticlesComponent = () => {
           requestAnimationFrame(update);
         };
         requestAnimationFrame(update);
-      } else {
-        console.error('particlesJS or Stats is not loaded');
       }
-    }).catch(error => {
-      console.error('Error loading scripts:', error);
+    }).catch((error) => {
+      console.error('Error al cargar stats.js:', error);
     });
 
     return () => {
-      // Cleanup cuando el componente se desmonte
       if (statsRef.current) {
         document.body.removeChild(statsRef.current.domElement);
       }
     };
   }, []);
 
-
   return (
     <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white' : 'bg-transparent'}`}>
-      <div className="js-count-particles w-full h-full" id='js-count-particles'>
+      {/* Suspense para cargar AboutMe de manera perezosa */}
+      <Suspense fallback={<div>Loading...</div>}>
         <AboutMe />
-      </div>
+      </Suspense>
     </div>
-  )
+  );
 };
 
 export default ParticlesComponent;
