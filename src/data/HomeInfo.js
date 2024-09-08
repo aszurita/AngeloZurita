@@ -84,26 +84,6 @@ export let info = {
       link: "https://azure.microsoft.com/en-us/services/sql-database/"
     },
     {
-      name_tool: "Plotly",
-      image: "assets/tools/Ploty.png",
-      link: "https://plotly.com/"
-    },
-    {
-      name_tool: "NumPy",
-      image: "assets/tools/NumPy.png",
-      link: "https://numpy.org/"
-    },
-    {
-      name_tool: "Pandas",
-      image: "assets/tools/Pandas.png",
-      link: "https://pandas.pydata.org/"
-    },
-    {
-      name_tool: "Matplotlib",
-      image: "assets/tools/Matplotlib.png",
-      link: "https://matplotlib.org/"
-    },
-    {
       name_tool: "scikit-learn",
       image: "assets/tools/scikit-learn.png",
       link: "https://scikit-learn.org/"

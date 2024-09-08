@@ -21,21 +21,6 @@ function MeExperienceSection() {
               <Experience key={index} experience={experience} />
             ))
           }
-          <div className="w-full">
-            <p className="text-2xl font-roboto-slab font-bold select-none">Education</p>
-            {
-              profile.education && profile.education.map((education, index) => {
-                return (
-                  <div className="flex place-items-center font-roboto-slab text-base">
-                  <svg width="40" height="40">
-                    <circle cx="20" cy="20" r="6" stroke="#f8f9fa" stroke-width="2" fill="#69b3a2" />
-                  </svg>
-                  <span key={index}>{education.title}</span>
-                </div>
-                )
-              })
-            }
-          </div>
         </div>
       </div>
     </div>
