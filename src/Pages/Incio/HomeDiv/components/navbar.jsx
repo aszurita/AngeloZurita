@@ -9,7 +9,7 @@ function NavbarHome() {
 
   return (
     <Navbar fluid rounded className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black !text-white" : "bg-white"} `}>
-      <Navbar.Brand href="" className="ml-10" onClick={() => setActiveLink("HOME")}>
+      <Navbar.Brand href="#Home" className="ml-10" onClick={() => setActiveLink("HOME")}>
         <span className="font-roboto-slab self-center whitespace-nowrap text-xl dark:text-white text-green-calid">
           AngeloZurita
         </span>

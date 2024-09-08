@@ -8,7 +8,7 @@ import { useContext } from 'react';
 function Home() {
     const { darkMode } = useContext(ThemeContext);
     return (
-        <div className={`${darkMode ? 'bg-black text-white' : 'text-black bg-white'} h-ful`}>
+        <div className={`${darkMode ? 'bg-black text-white' : 'text-black bg-white'} h-ful`} id="Home">
             <NavbarHome />
             <Particles />
             <AreaToolsSkills />
