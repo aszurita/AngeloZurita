@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useContext, Suspense } from 'react';
 import './ParticleBackground.css';
 import { ThemeContext } from "../Shared/ThemeContext";
 
-// Lazy-load de AboutMe para optimizar la carga inicial
+
 const AboutMe = React.lazy(() => import('./components/aboutme'));
 
 const ParticlesComponent = () => {
@@ -10,23 +10,20 @@ const ParticlesComponent = () => {
   const { darkMode } = useContext(ThemeContext);
 
   useEffect(() => {
-    // Función para cargar scripts
     const loadScript = (src) => {
       return new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
-        script.defer = true;  // Carga sin bloquear el HTML
+        script.defer = true;
         script.onload = resolve;
         script.onerror = () => reject(new Error(`Error cargando el script: ${src}`));
         document.body.appendChild(script);
       });
     };
 
-    // Cargar los scripts de forma paralela
     const loadParticles = loadScript('/assets/js/particles.js');
     const loadStats = loadScript('/assets/js/stats.js');
 
-    // Inicializar partículas después de cargar
     loadParticles.then(() => {
       if (window.particlesJS) {
         window.particlesJS('particles-js', {
@@ -65,7 +62,6 @@ const ParticlesComponent = () => {
       }
     });
 
-    // Cargar y inicializar stats.js
     loadStats.then(() => {
       if (window.Stats) {
         const stats = new window.Stats();
@@ -92,7 +88,6 @@ const ParticlesComponent = () => {
 
   return (
     <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white' : 'bg-transparent'}`}>
-      {/* Suspense para cargar AboutMe de manera perezosa */}
       <Suspense fallback={<div>Loading...</div>}>
         <AboutMe />
       </Suspense>
