@@ -9,18 +9,11 @@ export let info = {
       placework: "Stanford University",
     },
     {
-      name: "Frontend Developer",
+      name: "Full Stack Developer",
       imagen:"assets/skills/Fronted.png",
       phrase: "The web is a canvas for creativity.",
       author: "Evan You",
       placework: "Creator of Vue.js"
-    },
-    {
-      name: "Backend Developer",
-      imagen:"assets/skills/Backend.png",
-      phrase: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      author: "Martin Fowler",
-      placework: "ThoughtWorks"
     },
     {
       name: "Designer UX",
