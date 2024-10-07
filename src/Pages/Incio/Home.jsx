@@ -9,13 +9,14 @@ function Home() {
     const { darkMode } = useContext(ThemeContext);
     return (
         <div className={`${darkMode ? 'bg-black text-white' : 'text-black bg-white'} h-ful`} id="Home">
-            <NavbarHome />
-            <Particles />
-            <AreaToolsSkills />
-            <Projects />
-            <MeExperienceSection />
-            <div className={`h-10 w-full`}>
-            </div>
+            <header><NavbarHome /></header>
+            <section><Particles /></section>
+            <section><AreaToolsSkills /></section>
+            <section><Projects /></section>
+            <section><MeExperienceSection /></section>
+            <footer className={`h-10 w-full`}>
+                Este es un ejemplo de footer
+            </footer>
         </div>
     );
 }
