@@ -29,7 +29,7 @@ function NavbarHome() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 6h18M3 12h18M3 18h18" />
           </svg>
         </button>
         <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
@@ -53,7 +53,7 @@ function NavbarHome() {
               setIsMenuOpen(false);
             }}
           >
-            {darkMode ? <div className="flex flex-row pt-4 hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20} /> </div> : <div className="flex flex-row pt-4 hover:text-green-calid"> DARK MODE <MdDarkMode size={20} /> </div>}&nbsp;
+            {darkMode ? <div className="flex flex-row items-center mb-[1px] hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20} /> </div> : <div className="flex flex-row items-center hover:text-green-calid mb-[1px]"> DARK MODE <MdDarkMode size={20} /> </div>}
           </div>
         </div>
       </div>
