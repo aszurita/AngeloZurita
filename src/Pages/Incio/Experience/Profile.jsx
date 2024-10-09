@@ -22,9 +22,6 @@ function Profile() {
           <SocialMedia sm={true} type='github' />
           <SocialMedia sm={true} type='linkedin' />
           <SocialMedia sm={true} type='X' />
-          <SocialMedia sm={false} type='github' />
-          <SocialMedia sm={false} type='linkedin' />
-          <SocialMedia sm={false} type='X' />
         </div>
       </div>
     </div>

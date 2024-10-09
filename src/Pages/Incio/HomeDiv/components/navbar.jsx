@@ -33,7 +33,7 @@ function NavbarHome() {
           </svg>
         </button>
         <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
-          {['ABOUT ME', 'PORTFOLIO', 'TOOLS'].map((item) => (
+          {['TOOLS','PORTFOLIO','EXPERIENCE'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '')}`}

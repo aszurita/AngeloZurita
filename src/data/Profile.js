@@ -4,16 +4,22 @@ export let profile ={
   phrase : "Never give up without trying, because innovation distinguishes between a leader and a follower",
   experiences:[
     {
-      date: "01/04/2024 - Current",
-      title: "Vice President TAWS",
-      place: "Guayaquil, Ecuador",
-      description: ["Direct applied research projects for publication in conferences.", "Coordinate workshops, meetings, talks, and hackathons to enhance the technical skills of members.", "Encourage the development of software projects and the learning of new technologies."]
+      date: "30/09/2024 - Current",
+      title: "Teaching Assistant for Design Software ",
+      place: "Escuela Superior Politécnica del Litoral (ESPOL), Guayaquil, Ecuador",
+      description: ["Perform 2 hours of class-related tasks per week.", "Dedicate 2 hours per week to grading assignments and exams.","Offer 1 hour of consultation per week for students."]
     },
     {
       date: "01/05/2024 - Current",
       title: "Teaching Assistant for Fundamentals of Programming",
       place: "Escuela Superior Politécnica del Litoral (ESPOL), Guayaquil, Ecuador",
       description: ["Perform 2 hours of class-related tasks per week.", "Dedicate 2 hours per week to grading assignments and exams.","Offer 1 hour of consultation per week for students."]
+    },
+    {
+      date: "01/04/2024 - Current",
+      title: "Vice President TAWS",
+      place: "Guayaquil, Ecuador",
+      description: ["Direct applied research projects for publication in conferences.", "Coordinate workshops, meetings, talks, and hackathons to enhance the technical skills of members.", "Encourage the development of software projects and the learning of new technologies."]
     },
     {
       date: "18/03/2024 - Current",

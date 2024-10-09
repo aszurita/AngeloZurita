@@ -15,7 +15,12 @@ function Home() {
             <section><Projects /></section>
             <section><MeExperienceSection /></section>
             <footer className={`h-10 w-full`}>
-                Este es un ejemplo de footer
+                <div>
+
+                </div>
+                <div>
+                    
+                </div>
             </footer>
         </div>
     );
