@@ -9,11 +9,6 @@ function NavbarHome() {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  function capitalizeFirstLetter(text) {
-    return text.toLowerCase().replace(/\b\w/g, (char) => char.toUpperCase());
-  }
-
-  
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 ${darkMode ? "bg-black text-white" : "bg-white text-black"}`}>
       <div className="container mx-auto flex justify-between items-center p-4">
@@ -38,25 +33,28 @@ function NavbarHome() {
           </svg>
         </button>
         <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
-          {['ABOUT ME', 'PORTFOLIO', 'TOOLS', 'DARK MODE'].map((item) => (
+          {['ABOUT ME', 'PORTFOLIO', 'TOOLS'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '')}`}
               className={`block py-2 px-4 border-b border-gray-200 lg:inline-block lg:border-none hover:text-green-calid ${activeLink === item ? "text-green-calid border-green-calid" : ""}`}
               onClick={() => {
                 setActiveLink(item);
-                if (item === 'DARK MODE') toggleDarkMode();
                 setIsMenuOpen(false);
               }}
             >
               {item}
-              {item === 'DARK MODE' && (
-                <span className="ml-2 inline-block align-middle">
-                  {darkMode ? <MdDarkMode size={20} /> : <MdOutlineDarkMode size={20} />}
-                </span>
-              )}
             </a>
           ))}
+          <div
+            className="flex items-center cursor-pointer py-2 px-4 border-b border-gray-200 lg:inline-block lg:border-none max-sm:pt-2 max-sm:pr-4 max-sm:pb-2 max-sm:pl-3"
+            onClick={() => {
+              toggleDarkMode();
+              setIsMenuOpen(false);
+            }}
+          >
+              {darkMode ? <div className="flex flex-row pt-4 hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20}/> </div>: <div className="flex flex-row pt-4 hover:text-green-calid"> DARK MODE <MdDarkMode size={20} /> </div>}&nbsp;
+          </div>
         </div>
       </div>
     </nav>
