@@ -14,7 +14,7 @@ function NavbarHome() {
       <div className="container mx-auto flex justify-between items-center p-4">
         <a href="#Home" className="ml-4 lg:ml-10" onClick={() => setActiveLink("HOME")}>
           <span className="font-roboto-slab self-center whitespace-nowrap text-xl text-green-calid">
-            AngeloZurita
+            ANGELO ZURITA
           </span>
         </a>
         <button
@@ -32,7 +32,7 @@ function NavbarHome() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
           </svg>
         </button>
-        <div className={`lg:flex lg:items-center lg:space-x-6 font-montserrat text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
+        <div className={`lg:flex lg:items-center lg:space-x-6 font-roboto-slab text-xl mr-4 lg:mr-40 select-none ${isMenuOpen ? `block absolute top-full left-0 right-0 ${darkMode ? "bg-black text-white" : "bg-white text-black"}` : 'hidden'}`}>
           {['ABOUT ME', 'PORTFOLIO', 'TOOLS', 'DARK MODE'].map((item) => (
             <a
               key={item}
