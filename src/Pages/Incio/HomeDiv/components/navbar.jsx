@@ -53,7 +53,7 @@ function NavbarHome() {
               setIsMenuOpen(false);
             }}
           >
-              {darkMode ? <div className="flex flex-row pt-4 hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20}/> </div>: <div className="flex flex-row pt-4 hover:text-green-calid"> DARK MODE <MdDarkMode size={20} /> </div>}&nbsp;
+            {darkMode ? <div className="flex flex-row pt-4 hover:text-green-calid"> LIGHT MODE <MdOutlineDarkMode size={20} /> </div> : <div className="flex flex-row pt-4 hover:text-green-calid"> DARK MODE <MdDarkMode size={20} /> </div>}&nbsp;
           </div>
         </div>
       </div>
