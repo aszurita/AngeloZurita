@@ -35,6 +35,13 @@ export let profile ={
       video:"assets/videos/BREAST-CANCER-DETECTION-TOOL.mp4",
       link : "https://medium.com/@aszurita/did-you-know-that-breast-cancer-is-the-leading-cause-of-mortality-among-women-in-ecuador-5588974c3a44"
     },
+  ],
+  presentations : [
+    {
+      title: "Boost Your Learning with Artificial Intelligence",
+      text:"In this talk, I explored the power of Artificial Intelligence in transforming the learning experience. I started by explaining how AI tools can be used to enhance both the efficiency and effectiveness of personal study routines. A key focus was on creating tailored learning paths, helping learners set clear goals and break them down into manageable steps, using AI-driven systems. Furthermore, I discussed the various AI platforms available and how each can be optimized for specific tasks, highlighting the strengths and use cases of each tool. By incorporating real-world examples, I showed how to use AI prompts to streamline the process of learning complex topics, such as programming. Finally, the talk emphasized the adaptability of AI in addressing individual learning needs, making it possible to personalize educational experiences based on the learner's unique goals and preferences.",
+      video:"assets/videos/IA.mp4",
+    },
   ]
   
 }

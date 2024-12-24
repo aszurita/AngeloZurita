@@ -3,7 +3,7 @@ export let projects=[
     name:"Breast Cancer Detection",
     image:"assets/projects/BreastCancer.png",
     description :"Machine learning model to predict the benignity or malignancy of breast tumors, optimizing early detection and accurate diagnosis of cancer through advanced data analysis and classification.",
-    link:"https://breastcancer-vnl9.onrender.com/",
+    link:"https://breastcancer-d70m.onrender.com/",
     github:"https://github.com/aszurita/BreastCancer",
     tools:[
       "Python","CSS3","GitHub","scikit-learn","CatBoost"
