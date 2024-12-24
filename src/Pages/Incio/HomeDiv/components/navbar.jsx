@@ -16,12 +16,12 @@ function NavbarHome() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse className="font-montserrat text-xl mr-10 lg:mr-40 select-none ">
-        <Navbar.Link
-          href="#AboutMe"
-          className={`hover:!text-green-calid ${activeLink === "ABOUT ME" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
-          onClick={() => setActiveLink("ABOUT ME")}
+      <Navbar.Link
+          href="#Tools"
+          className={`hover:!text-green-calid ${activeLink === "TOOLS" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
+          onClick={() => setActiveLink("TOOLS")}
         >
-          ABOUT ME
+          TOOLS
         </Navbar.Link>
         <Navbar.Link
           href="#Portfolio"
@@ -31,11 +31,25 @@ function NavbarHome() {
           PORTFOLIO
         </Navbar.Link>
         <Navbar.Link
-          href="#Tools"
-          className={`hover:!text-green-calid ${activeLink === "TOOLS" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
-          onClick={() => setActiveLink("TOOLS")}
+          href="#Articles"
+          className={`hover:!text-green-calid ${activeLink === "ARTICLES" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
+          onClick={() => setActiveLink("ARTICLES")}
         >
-          TOOLS
+          ARTICLES
+        </Navbar.Link>
+        <Navbar.Link
+          href="#Presentations"
+          className={`hover:!text-green-calid ${activeLink === "PRESENTATIONS" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
+          onClick={() => setActiveLink("PRESENTATIONS")}
+        >
+          PRESENTATIONS
+        </Navbar.Link>
+        <Navbar.Link
+          href="#Experiences"
+          className={`hover:!text-green-calid ${activeLink === "EXPERIENCES" ? "text-green-calid !border-b-2 !border-green-calid" : ""} mt-1`}
+          onClick={() => setActiveLink("EXPERIENCES")}
+        >
+          EXPERIENCES
         </Navbar.Link>
         <div
           className="flex items-center cursor-pointer max-sm:pt-2 max-sm:pr-4 max-sm:pb-2 max-sm:pl-3"
