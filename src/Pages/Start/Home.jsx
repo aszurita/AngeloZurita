@@ -5,6 +5,7 @@ import Projects from "./Portfolio/Projects";
 import MeExperienceSection from "./Experience/MeExperienceSection";
 import ArticlesSection from "./Article/ArticlesSection";
 import PresentationsSection from "./Presentations/PresentationsSection";
+import Footer from "./HomeDiv/components/Footer";
 import { ThemeContext } from "./Shared/ThemeContext";
 import { useContext } from 'react';
 function Home() {
@@ -20,6 +21,7 @@ function Home() {
             <MeExperienceSection />
             <div className={`h-10 w-full`}>
             </div>
+            <Footer/>
         </div>
     );
 }
