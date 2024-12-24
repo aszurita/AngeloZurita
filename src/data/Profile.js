@@ -28,39 +28,13 @@ export let profile ={
       description: ["Supervise the development and maintenance of the WiDS ESPOL 2024 website.","Lead a team to implement key functionalities, optimizing user experience and site performance."]
     }
   ],
-  education : [
+  articles : [
     {
-      title: "Estructuras de Datos",
-      place: "ESPOL"
+      title: "Did you know that breast cancer is the leading cause of mortality among women in Ecuador?",
+      text:"Breast cancer is the leading cause of mortality among women in Ecuador, with 3,903 cases and 1,154 deaths recorded in 2022. This means that approximately 1 in 3 cases results in death. Globally, breast cancer is the most common cancer among women, with an estimated 2.3 million new cases annually. To address this issue, a predictive model has been proposed, utilizing key tumor characteristics—such as radius, texture, perimeter, and area—obtained through diagnostic tests like mammograms, ultrasounds, and MRIs. This approach aims to improve accuracy in differentiating between benign and malignant tumors, supporting doctors in data-driven decision-making.",
+      video:"assets/videos/BREAST-CANCER-DETECTION-TOOL.mp4",
+      link : "https://medium.com/@aszurita/did-you-know-that-breast-cancer-is-the-leading-cause-of-mortality-among-women-in-ecuador-5588974c3a44"
     },
-    {
-      title: "Diseño de Software",
-      place: "ESPOL"
-    },
-    {
-      title: "Redes de Datos",
-      place: "ESPOL"
-    },
-    {
-      title: "Interacción Humano Computador",
-      place: "ESPOL"
-    },
-    {
-      title: "Sistema de Bases de Datos",
-      place: "ESPOL"
-    },
-    {
-      title: "Programación Orientada a Objetos",
-      place: "ESPOL"
-    },
-    {
-      title: "Fundamentos de Programación",
-      place: "ESPOL"
-    },
-    {
-      title: "Programación de Sistemas",
-      place: "ESPOL"
-    }
   ]
   
 }
