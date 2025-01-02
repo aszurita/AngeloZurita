@@ -3,7 +3,8 @@ import SocialMedia from "../HomeDiv/components/socialmedia.jsx";
 
 function Profile() {
   return (
-    <div className="flex flex-col place-content-center place-items-center">
+    <div className="flex flex-col place-content-center place-items-center"  data-aos="fade-up"
+    data-aos-duration="2000">
       <div >
         <img src="assets/profile/profile.jpg" alt="profile" className="w-40 h-40" />
       </div>

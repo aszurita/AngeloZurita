@@ -1,6 +1,6 @@
 function Article ({ article }){
   return (
-    <div className="flex flex-col lg:flex-row w-full gap-6 pb-5 p-5 border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid text-black">
+    <div className="flex flex-col lg:flex-row w-full gap-6 pb-5 p-5 border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid text-black" data-aos="fade-up">
       <div className="flex flex-col font-roboto-slab lg:w-1/2 w-full">
         <h2 className="text-2xl font-bold mb-4">{article.title}</h2>
         <p className="text-lg mb-4">{article.text}</p>

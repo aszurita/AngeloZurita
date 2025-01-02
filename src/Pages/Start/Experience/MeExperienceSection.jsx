@@ -15,7 +15,7 @@ function MeExperienceSection() {
         <div className="w-2/3 max-lg:pt-5">
           {
             profile.experiences && profile.experiences.map((experience, index) => (
-              <Experience key={index} experience={experience} />
+              <Experience key={index} experience={experience}/>
             ))
           }
         </div>

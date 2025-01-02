@@ -89,7 +89,7 @@ const ParticlesComponent = () => {
   return (
     <div id="particles-js" className={`relative ${darkMode ? 'bg-black text-white' : 'bg-transparent'}`}>
       <Suspense fallback={<div>Loading...</div>}>
-        <AboutMe />
+        <AboutMe/>
       </Suspense>
     </div>
   );

@@ -1,6 +1,6 @@
-function Experience({ experience }) {
+function Experience({ experience, key }) {
   return (
-    <div className="flex w-full pb-5">
+    <div className="flex w-full pb-5" data-aos={key % 2 === 0 ? "fade-right" : "fade-left"}>
       <div className="w-1/6 font-roboto-slab text-base">
         <p className="pt-2 text-sm max-sm:text-xs">{experience.date}</p>
       </div>

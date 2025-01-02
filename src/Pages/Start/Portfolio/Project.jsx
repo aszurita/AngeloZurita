@@ -5,7 +5,8 @@ function Project({ project }) {
   const tools = info.tools;
   const link_image = project.link || project.github;
   return (
-    <div className="min-w-[300px] w-5/12 flex flex-col border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid text-black">
+    <div className="min-w-[300px] w-5/12 flex flex-col border-r border-gray-2 rounded-xl bg-gray  shadow-lg shadow-green-calid text-black" data-aos="fade-up"
+    data-aos-duration="1000">
       <div
         className="h-[350px] w-full overflow-hidden relative"
       >
