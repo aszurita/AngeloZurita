@@ -13,7 +13,7 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-green-calid">CONTACT ME</h3>
             <div className="flex flex-col space-y-2">
-              <a href="mailto:contact@example.com" className="flex items-center space-x-2 hover:text-green-calid transition-colors">
+              <a href="mailto:azurita@espol.edu.ec" className="flex items-center space-x-2 hover:text-green-calid transition-colors">
                 <Mail size={18} />
                 <span>azurita@espol.edu.ec</span>
               </a>
