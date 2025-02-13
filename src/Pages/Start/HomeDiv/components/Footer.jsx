@@ -6,7 +6,7 @@ import { useContext } from 'react';
 function Footer() {
   const { darkMode } = useContext(ThemeContext);
   return (
-    <footer className={`w-full ${darkMode ? 'text-white' : 'text-black'} bg-green-calid bg-opacity-10 text-base `} data-aos="fade-up">
+    <footer className={`w-full ${darkMode ? 'text-white' : 'text-black'} bg-green-calid bg-opacity-10 text-base `}>
       <div className="max-w-6xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Contact Section */}
@@ -24,11 +24,11 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-green-calid">QUICK LINKS</h3>
             <div className="flex flex-col space-y-2">
-              <a href="#Tools" className="hover:text-green-calid transition-colors" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" >TOOLS</a>
-              <a href="#Articles" className="hover:text-green-calid transition-colors" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">ARTICLES</a>
-              <a href="#Portfolio" className="hover:text-green-calid transition-colors" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" >PORTFOLIO</a>
-              <a href="#Experiences" className="hover:text-green-calid transition-colors" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine" >EXPERIENCES</a>
-              <a href="#Presentations" className="hover:text-green-calid transition-colors" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" >PRESENTATIONS</a>
+              <a href="#Tools" className="hover:text-green-calid transition-colors" >TOOLS</a>
+              <a href="#Articles" className="hover:text-green-calid transition-colors">ARTICLES</a>
+              <a href="#Portfolio" className="hover:text-green-calid transition-colors" >PORTFOLIO</a>
+              <a href="#Experiences" className="hover:text-green-calid transition-colors" >EXPERIENCES</a>
+              <a href="#Presentations" className="hover:text-green-calid transition-colors" >PRESENTATIONS</a>
             </div>
           </div>
 
@@ -36,15 +36,15 @@ function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-green-calid">FOLLOW ME</h3>
             <div className="flex space-x-4">
-              <a href="https://github.com/aszurita" className="hover:text-green-calid transition-colors" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <a href="https://github.com/aszurita" className="hover:text-green-calid transition-colors">
                 <SocialMedia sm={true} type='github' />
                 <SocialMedia sm={false} type='github' />
               </a>
-              <a href="https://www.linkedin.com/in/angelo-saul-zurita-guerrero/" className="hover:text-green-calid transition-colors"  data-aos="fade-bottom" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <a href="https://www.linkedin.com/in/angelo-saul-zurita-guerrero/" className="hover:text-green-calid transition-colors">
                 <SocialMedia sm={true} type='linkedin' />
                 <SocialMedia sm={false} type='linkedin' />
               </a>
-              <a href="https://x.com/angelozurita7" className="hover:text-green-calid transition-colors" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+              <a href="https://x.com/angelozurita7" className="hover:text-green-calid transition-colors">
                 <SocialMedia sm={true} type='X' />
                 <SocialMedia sm={false} type='X' />
               </a>
