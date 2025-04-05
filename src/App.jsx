@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 function App() {
   useEffect(() => {
     AOS.init({
-      once: false,
+      once: true,
       duration: 1000,
       offset: 100,
       delay: 0,
